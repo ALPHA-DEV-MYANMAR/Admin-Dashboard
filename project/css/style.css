@@ -2,3 +2,192 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+
+:root{
+    --normal:#E5E7EB;
+    --shadow:4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    --dark: #374151;
+    --hover: #D1D5DB;
+    --primary: #007bff;
+}
+
+.content{
+    background-color: var(--normal);
+    overflow: scroll;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    box-shadow: var(--shadow);
+    z-index: 2000;
+}
+
+.title{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+}
+
+.sidebar{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)inset;
+    overflow: scroll;
+}
+
+.custom-card{
+    box-shadow: var(--shadow);
+    transition: 0.1s;
+}
+
+.custom-card:hover{
+    transform:translateY(-2px)
+}
+
+.custom-card:active{
+    transform:scale(1.1);
+}
+
+.card{
+    box-shadow: var(--shadow);
+}
+
+.chart-img{
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+}
+
+.img-item{
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.item{
+    position: absolute !important;
+    bottom:-40px;
+    right : 20px;
+}
+
+.re-card{
+    margin-right: 10px;
+}
+
+.item-carousel{
+    margin-top: -100px;
+}
+
+.item-carousel-card{
+    margin-top: 240px;
+}
+
+.item-card-img{
+    height: 200px;
+}   
+
+.data-table{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    z-index: 2050;
+}
+
+.nav-menu{
+    margin-top: 50px;
+}
+.nav-menu ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+.menu-title{
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #949494;
+}
+.menu-item{
+    transition: 0.5s;
+}
+.menu-item:hover {
+    background-color: var(--primary-soft);
+    border-radius: 0.25rem;
+}
+.menu-item-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark);
+    padding: 10px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+.menu-item-link.active{
+    background-color: var(--primary);
+    color: white !important;
+}
+.menu-item-link:hover{
+    text-decoration: none;
+    color: var(--dark);
+}
+
+
+.menu-item-link span{
+
+}
+
+.menu-item-link i{
+
+}
+
+.menu-spacer{
+    padding: 10px 0;
+}
+
+
+@media screen and (max-width:480px){
+    .item-carousel-card {
+        margin-top: 100px !important;
+    }
+}
+
+@media screen and (max-width:780px){
+    /* SideBar Open */
+    .sidebar{
+        position: fixed;
+        z-index: 2001;
+        width: 300px;
+        display: block !important;
+        background-color: white;
+        margin-left: -300px;
+    }
+
+    .re-card{
+        margin-top:150px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .img-item{
+        width: 150px;
+        margin-bottom: 50px;
+    }
+
+    .item-carousel-card {
+        margin-top: 300px !important;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    .item-carousel-card {
+        margin-top: 170px !important;
+    }
+    .op-card{
+        margin-top: 200px !important; 
+    }
+}
+
